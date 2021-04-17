@@ -1,27 +1,27 @@
 package com.redhat.training.example;
 
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.GET;
-import javax.ws.rs.Produces;
-import java.net.InetAddress;
+import javax.ws.rs.path;
+import javax.ws.rs.core.response;
+import javax.ws.rs.get;
+import javax.ws.rs.produces;
+import java.net.inetaddress;
 
 
-@Path("/")
-public class Quip {
+@path("/")
+public class quip {
 
-@GET
-@Produces("text/plain")
-public Response index() throws Exception {
-    String host = InetAddress.getLocalHost().getHostName();
-    return Response.ok("Veni, vidi, vici...\n").build();
+@get
+@produces("text/plain")
+public response index() throws exception {
+    string host = inetaddress.getlocalhost().gethostname();
+    return response.ok("veni, vidi, vici...\n").build();
   }
 
-@GET
-@Path("/ready")
-@Produces("text/plain")
-public Response ready() throws Exception {
-    return Response.ok("OK\n").build();
+@get
+@path("/ready")
+@produces("text/plain")
+public response ready() throws exception {
+    return response.ok("ok\n").build();
   }
 
 }
